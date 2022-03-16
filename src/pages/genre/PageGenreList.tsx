@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import Page from "@/components/Page";
+import { tJoin } from "@/i18t/utils";
 import GenreTable from "./GenreTable";
 
 const PageGenreList: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Page title={t("Genre List")}>
+    <Page title={tJoin(["List", "Genre"], t)}>
       <Box dir="rtl" py={2}>
         <Fab
           title={t("Add Genre")}

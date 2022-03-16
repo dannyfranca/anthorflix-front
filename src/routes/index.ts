@@ -5,6 +5,7 @@ import i18next from "@/i18t";
 import Dashboard from "@/pages/Dashboard";
 import PageGenreList from "@/pages/genre/PageGenreList";
 import PageGenreForm from "@/pages/genre/PageGenreForm";
+import { tJoin } from "@/i18t/utils";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
@@ -24,21 +25,21 @@ const routes: AppRouteProps[] = [
   },
   {
     name: "genres.list",
-    label: i18next.t("Genre List"),
+    label: tJoin(["List", "Genre"]),
     path: "/genres",
     component: PageGenreList,
     exact: true,
   },
   {
     name: "genres.create",
-    label: i18next.t("Create Genre"),
+    label: tJoin(["Create", "Genre"]),
     path: "/genres/create",
     component: PageGenreForm,
     exact: true,
   },
   {
     name: "genres.edit",
-    label: i18next.t("Edit Genre"),
+    label: tJoin(["Edit", "Genre"]),
     path: "/genres/:id/edit",
     component: PageGenreForm,
     exact: true,

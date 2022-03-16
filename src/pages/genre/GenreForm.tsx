@@ -11,6 +11,7 @@ import * as yup from "@/util/vendor/yup";
 import { Genre } from "@/util/models";
 import genreHttp from "@/util/http/genre-http";
 import { SubmitActions } from "@/components/SubmitActions";
+import { tJoin } from "@/i18t/utils";
 
 const validationSchema = yup.object().shape({
   name: yup.string().required().max(70),
@@ -53,7 +54,7 @@ const GenreForm: React.FC = () => {
 
     return request
       .then(({ data }) => {
-        snackbar.enqueueSnackbar(t("Genre saved with success"), {
+        snackbar.enqueueSnackbar(tJoin(["Genre", "saved with success"], t), {
           variant: "success",
         });
         setTimeout(() => {
