@@ -6,7 +6,7 @@ type PageProps = {
   title: string;
 };
 
-const Page: React.FC<PageProps> = ({ title, children }) => {
+const DashboardPage: React.FC<PageProps> = ({ title, children }) => {
   useEffect(() => {
     document.title = `${title ?? ""} - Anthorflix`;
   }, [title]);
@@ -26,4 +26,4 @@ const Page: React.FC<PageProps> = ({ title, children }) => {
   );
 };
 
-export default Page;
+export default DashboardPage;
