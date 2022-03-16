@@ -1,6 +1,7 @@
 export const ptBrTranslations: { [k: string]: string } = {
   Dashboard: "Painel",
   Name: "Nome",
+  Title: "Título",
   Description: "Descrição",
   Active: "Ativo",
   "Created at": "Criado em",
@@ -12,6 +13,10 @@ export const ptBrTranslations: { [k: string]: string } = {
   "Save and continue editing": "Salvar e continuar editando",
   "saved with success": "salvo com sucesso",
   // ENTITIES
+  Movie: "Filme",
+  Movies: "Filmes",
+  Year: "Ano",
+  Synopsis: "Sinopse",
   Genre: "Gênero",
   Genres: "Gêneros",
   "Cast member": "Participante",

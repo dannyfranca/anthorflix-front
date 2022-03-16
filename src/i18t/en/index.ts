@@ -1,6 +1,7 @@
 export const enTranslations: { [k: string]: string } = {
   Dashboard: "Dashboard",
   Name: "Name",
+  Title: "Title",
   Description: "Description",
   Active: "Active",
   "Created at": "Created at",
@@ -12,6 +13,10 @@ export const enTranslations: { [k: string]: string } = {
   "Save and continue editing": "Save and continue editing",
   "saved with success": "saved with success",
   // ENTITIES
+  Movie: "Movie",
+  Movies: "Movies",
+  Year: "Year",
+  Synopsis: "Synopsis",
   Genre: "Genre",
   Genres: "Genres",
   "Cast member": "Cast member",

@@ -14,3 +14,9 @@ export interface Genre extends BaseEntity {
 export interface CastMember extends BaseEntity {
   name: string;
 }
+
+export interface Movie extends BaseEntity {
+  title: string;
+  description: string;
+  year_launched: number;
+}
