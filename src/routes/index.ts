@@ -27,7 +27,7 @@ const routes: AppRouteProps[] = [
   },
   {
     name: "genres.list",
-    label: tJoin(["List", "Genre"]),
+    label: tJoin(["List", "Genres"]),
     path: "/genres",
     component: PageGenreList,
     exact: true,
@@ -48,7 +48,7 @@ const routes: AppRouteProps[] = [
   },
   {
     name: "cast_members.list",
-    label: tJoin(["List", "Cast member"]),
+    label: tJoin(["List", "Cast members"]),
     path: "/cast_members",
     component: PageCastMemberList,
     exact: true,
