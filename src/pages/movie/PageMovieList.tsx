@@ -17,12 +17,12 @@ const PageMovieList: React.FC = () => {
     <DashboardPage title={tJoin(["List", "Movies"], t)}>
       <Box dir="rtl" py={2}>
         <Box component="span" px={1}>
-          <Tooltip title={tJoin(["Import", "Movie"]) as string}>
+          <Tooltip title={`${tJoin(["Import", "Movie"])} (${t("Soon")})`}>
             <Fab
               color="primary"
               size="small"
-              component={Link}
-              to="movies/import"
+              // component={Link}
+              // to="movies/import"
             >
               <ImportExport />
             </Fab>
