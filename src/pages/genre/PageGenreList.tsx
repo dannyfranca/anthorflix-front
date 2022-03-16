@@ -1,4 +1,4 @@
-import { Fab } from "@mui/material";
+import { Fab, Tooltip } from "@mui/material";
 import { Box } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import * as React from "react";
@@ -15,15 +15,11 @@ const PageGenreList: React.FC = () => {
   return (
     <DashboardPage title={tJoin(["List", "Genre"], t)}>
       <Box dir="rtl" py={2}>
-        <Fab
-          title={t("Add Genre")}
-          color="primary"
-          size="small"
-          component={Link}
-          to="genres/create"
-        >
-          <AddIcon />
-        </Fab>
+        <Tooltip title={tJoin(["Add", "Genre"]) as string}>
+          <Fab color="primary" size="small" component={Link} to="genres/create">
+            <AddIcon />
+          </Fab>
+        </Tooltip>
       </Box>
       <Box>
         <GenreTable />

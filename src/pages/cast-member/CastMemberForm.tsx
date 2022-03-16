@@ -61,8 +61,9 @@ const CastMemberForm: React.FC = () => {
           }
         );
         setTimeout(() => {
-          if (event) history.push("/cast_members");
-          else if (!id) history.push(`/cast_members/${data?.id}/edit`);
+          if (event) history.push("/dashboard/cast_members");
+          else if (!id)
+            history.push(`/dashboard/cast_members/${data?.id}/edit`);
         });
       })
       .catch((error) => {

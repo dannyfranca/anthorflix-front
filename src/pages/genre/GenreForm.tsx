@@ -58,8 +58,8 @@ const GenreForm: React.FC = () => {
           variant: "success",
         });
         setTimeout(() => {
-          if (event) history.push("/genres");
-          else if (!id) history.push(`/genres/${data?.id}/edit`);
+          if (event) history.push("/dashboard/genres");
+          else if (!id) history.push(`/dashboard/genres/${data?.id}/edit`);
         });
       })
       .catch((error) => {
