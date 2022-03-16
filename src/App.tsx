@@ -4,19 +4,22 @@ import "./i18t";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { theme } from "./config/theme";
-import NavBar from "./components/NavBar";
 import AppRouter from "./routes/AppRouter";
+import NavBar from "./components/NavBar";
+import SnackbarProvider from "./components/SnackbarProvider";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <NavBar />
-        <Box paddingTop="70px">
-          <AppRouter />
-        </Box>
-      </BrowserRouter>
+      <SnackbarProvider>
+        <CssBaseline />
+        <BrowserRouter>
+          <NavBar />
+          <Box paddingTop="70px">
+            <AppRouter />
+          </Box>
+        </BrowserRouter>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 }
