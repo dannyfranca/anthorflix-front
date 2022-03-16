@@ -6,6 +6,7 @@ import Dashboard from "@/pages/Dashboard";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
+  path: string;
   label: string;
   component: FunctionComponent;
   exact?: boolean;
