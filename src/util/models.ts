@@ -10,3 +10,7 @@ interface BaseEntity extends Timestampable {
 export interface Genre extends BaseEntity {
   name: string;
 }
+
+export interface CastMember extends BaseEntity {
+  name: string;
+}

@@ -14,6 +14,8 @@ export const enTranslations: { [k: string]: string } = {
   // ENTITIES
   Genre: "Genre",
   Genres: "Genres",
+  "Cast member": "Cast member",
+  "Cast members": "Cast members",
   // DATA TABLE
   "No match records found": "No match records found",
   Sort: "Sort",

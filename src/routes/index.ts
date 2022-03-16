@@ -6,6 +6,8 @@ import Dashboard from "@/pages/Dashboard";
 import PageGenreList from "@/pages/genre/PageGenreList";
 import PageGenreForm from "@/pages/genre/PageGenreForm";
 import { tJoin } from "@/i18t/utils";
+import PageCastMemberList from "@/pages/cast-member/PageCastMemberList";
+import PageCastMemberForm from "@/pages/cast-member/PageCastMemberForm";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
@@ -42,6 +44,27 @@ const routes: AppRouteProps[] = [
     label: tJoin(["Edit", "Genre"]),
     path: "/genres/:id/edit",
     component: PageGenreForm,
+    exact: true,
+  },
+  {
+    name: "cast_members.list",
+    label: tJoin(["List", "Cast member"]),
+    path: "/cast_members",
+    component: PageCastMemberList,
+    exact: true,
+  },
+  {
+    name: "cast_members.create",
+    label: tJoin(["Create", "Cast member"]),
+    path: "/cast_members/create",
+    component: PageCastMemberForm,
+    exact: true,
+  },
+  {
+    name: "cast_members.edit",
+    label: tJoin(["Edit", "Cast member"]),
+    path: "/cast_members/:id/edit",
+    component: PageCastMemberForm,
     exact: true,
   },
 ];
