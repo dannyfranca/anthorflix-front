@@ -5,7 +5,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Page from "@/components/Page";
+import DashboardPage from "@/components/DashboardPage";
 import { tJoin } from "@/i18t/utils";
 import GenreTable from "./GenreTable";
 
@@ -13,7 +13,7 @@ const PageGenreList: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Page title={tJoin(["List", "Genre"], t)}>
+    <DashboardPage title={tJoin(["List", "Genre"], t)}>
       <Box dir="rtl" py={2}>
         <Fab
           title={t("Add Genre")}
@@ -28,7 +28,7 @@ const PageGenreList: React.FC = () => {
       <Box>
         <GenreTable />
       </Box>
-    </Page>
+    </DashboardPage>
   );
 };
 

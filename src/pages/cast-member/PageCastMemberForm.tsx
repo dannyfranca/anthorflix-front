@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Page from "@/components/Page";
+import DashboardPage from "@/components/DashboardPage";
 import SingleGrid from "@/components/SingleGrid";
 import { tJoin } from "@/i18t/utils";
 import CastMemberForm from "./CastMemberForm";
@@ -12,7 +12,7 @@ const PageCastMemberForm = () => {
   const { t } = useTranslation();
 
   return (
-    <Page
+    <DashboardPage
       title={
         id
           ? tJoin(["Edit", "Cast member"], t)
@@ -22,7 +22,7 @@ const PageCastMemberForm = () => {
       <SingleGrid maxSize={8}>
         <CastMemberForm />
       </SingleGrid>
-    </Page>
+    </DashboardPage>
   );
 };
 

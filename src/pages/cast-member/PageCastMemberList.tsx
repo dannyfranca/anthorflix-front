@@ -5,7 +5,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Page from "@/components/Page";
+import DashboardPage from "@/components/DashboardPage";
 import { tJoin } from "@/i18t/utils";
 import CastMemberTable from "./CastMemberTable";
 
@@ -13,7 +13,7 @@ const PageCastMemberList: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Page title={tJoin(["List", "Cast member"], t)}>
+    <DashboardPage title={tJoin(["List", "Cast member"], t)}>
       <Box dir="rtl" py={2}>
         <Fab
           title={t("Add Cast member")}
@@ -28,7 +28,7 @@ const PageCastMemberList: React.FC = () => {
       <Box>
         <CastMemberTable />
       </Box>
-    </Page>
+    </DashboardPage>
   );
 };
 

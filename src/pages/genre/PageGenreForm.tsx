@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Page from "@/components/Page";
+import DashboardPage from "@/components/DashboardPage";
 import SingleGrid from "@/components/SingleGrid";
 import { tJoin } from "@/i18t/utils";
 import GenreForm from "./GenreForm";
@@ -12,13 +12,13 @@ const PageGenreForm = () => {
   const { t } = useTranslation();
 
   return (
-    <Page
+    <DashboardPage
       title={id ? tJoin(["Edit", "Genre"], t) : tJoin(["Create", "Genre"], t)}
     >
       <SingleGrid maxSize={8}>
         <GenreForm />
       </SingleGrid>
-    </Page>
+    </DashboardPage>
   );
 };
 
