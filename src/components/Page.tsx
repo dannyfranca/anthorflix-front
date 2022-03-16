@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -7,6 +7,10 @@ type PageProps = {
 };
 
 const Page: React.FC<PageProps> = ({ title, children }) => {
+  useEffect(() => {
+    document.title = `${title ?? ""} - Anthorflix`;
+  }, [title]);
+
   return (
     <Container>
       <Typography
