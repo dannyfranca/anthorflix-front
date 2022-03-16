@@ -10,6 +10,7 @@ export const enTranslations: { [k: string]: string } = {
   Add: "Add",
   Create: "Create",
   Edit: "Edit",
+  Import: "Import",
   "Save and continue editing": "Save and continue editing",
   "saved with success": "saved with success",
   // ENTITIES

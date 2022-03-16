@@ -10,6 +10,7 @@ export const ptBrTranslations: { [k: string]: string } = {
   Add: "Adicionar",
   Create: "Criar",
   Edit: "Editar",
+  Import: "Importar",
   "Save and continue editing": "Salvar e continuar editando",
   "saved with success": "salvo com sucesso",
   // ENTITIES
