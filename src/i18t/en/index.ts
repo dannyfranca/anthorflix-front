@@ -5,7 +5,15 @@ export const enTranslations: { [k: string]: string } = {
   Active: "Active",
   "Created at": "Created at",
   Save: "Save",
+  List: "List",
+  Add: "Add",
+  Create: "Create",
+  Edit: "Edit",
   "Save and continue editing": "Save and continue editing",
+  "saved with success": "saved with success",
+  // ENTITIES
+  Genre: "Genre",
+  Genres: "Genres",
   // DATA TABLE
   "No match records found": "No match records found",
   Sort: "Sort",

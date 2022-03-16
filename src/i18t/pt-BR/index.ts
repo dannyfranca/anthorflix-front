@@ -5,7 +5,15 @@ export const ptBrTranslations: { [k: string]: string } = {
   Active: "Ativo",
   "Created at": "Criado em",
   Save: "Salvar",
+  List: "Listar",
+  Add: "Adicionar",
+  Create: "Criar",
+  Edit: "Editar",
   "Save and continue editing": "Salvar e continuar editando",
+  "saved with success": "salvo com sucesso",
+  // ENTITIES
+  Genre: "Gênero",
+  Genres: "Gêneros",
   // DATA TABLE
   "No match records found": "Nenhum registro encontrado",
   Sort: "Classificar",
