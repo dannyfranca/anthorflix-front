@@ -7,7 +7,7 @@ import Menu from "./Menu";
 const NavBar: React.FC = () => {
   return (
     <AppBar>
-      <Toolbar sx={{ backgroundColor: "#000000" }}>
+      <Toolbar sx={{ backgroundColor: "#111A20" }}>
         <Menu />
         <Logo />
         <Button color="inherit">Login</Button>

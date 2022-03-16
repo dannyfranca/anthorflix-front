@@ -3,11 +3,11 @@ import { green, red } from "@mui/material/colors";
 
 const palette: PaletteOptions = {
   primary: {
-    main: "#0051D6",
+    main: "#2E9D9F",
     contrastText: "#fff",
   },
   secondary: {
-    main: "#D69000",
+    main: "#96D536",
     contrastText: "#fff",
   },
   background: {
