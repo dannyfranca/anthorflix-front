@@ -1,0 +1,56 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": ["error", { "endOfLine": "auto" }],
+      "import/no-unresolved": "error",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "import/extensions": "off",
+      "react/jsx-filename-extension": "off",
+      "react/function-component-definition": "off",
+      "react/require-default-props": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/no-unstable-nested-components": "off",
+      "react/destructuring-assignment": "off",
+      "import/prefer-default-export": "off",
+      "no-useless-constructor": "off",
+      "no-shadow": "off",
+      "no-empty": "off",
+      "no-param-reassign": "off",
+      "no-promise-executor-return": "off",
+      "no-unused-expressions": "off",
+      "no-return-assign": "off",
+      "no-use-before-define": "off",
+      "default-param-last": "off",
+      "lines-between-class-members": "off",
+      "import/no-extraneous-dependencies": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+}
