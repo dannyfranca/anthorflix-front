@@ -10,6 +10,7 @@ import PageCastMemberList from "@/pages/dashboard/cast-member/PageCastMemberList
 import PageCastMemberForm from "@/pages/dashboard/cast-member/PageCastMemberForm";
 import PageMovieList from "@/pages/dashboard/movie/PageMovieList";
 import PageMovieForm from "@/pages/dashboard/movie/PageMovieForm";
+import MovieList from "@/pages/MovieList";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
@@ -28,66 +29,73 @@ const routes: AppRouteProps[] = [
     exact: true,
   },
   {
-    name: "genres.list",
+    name: "dashboard.genres.list",
     label: tJoin(["List", "Genres"]),
     path: "/dashboard/genres",
     component: PageGenreList,
     exact: true,
   },
   {
-    name: "genres.create",
+    name: "dashboard.genres.create",
     label: tJoin(["Create", "Genre"]),
     path: "/dashboard/genres/create",
     component: PageGenreForm,
     exact: true,
   },
   {
-    name: "genres.edit",
+    name: "dashboard.genres.edit",
     label: tJoin(["Edit", "Genre"]),
     path: "/dashboard/genres/:id/edit",
     component: PageGenreForm,
     exact: true,
   },
   {
-    name: "cast_members.list",
+    name: "dashboard.cast_members.list",
     label: tJoin(["List", "Cast members"]),
     path: "/dashboard/cast_members",
     component: PageCastMemberList,
     exact: true,
   },
   {
-    name: "cast_members.create",
+    name: "dashboard.cast_members.create",
     label: tJoin(["Create", "Cast member"]),
     path: "/dashboard/cast_members/create",
     component: PageCastMemberForm,
     exact: true,
   },
   {
-    name: "cast_members.edit",
+    name: "dashboard.cast_members.edit",
     label: tJoin(["Edit", "Cast member"]),
     path: "/dashboard/cast_members/:id/edit",
     component: PageCastMemberForm,
     exact: true,
   },
   {
-    name: "movies.list",
+    name: "dashboard.movies.list",
     label: tJoin(["List", "Movies"]),
     path: "/dashboard/movies",
     component: PageMovieList,
     exact: true,
   },
   {
-    name: "movies.create",
+    name: "dashboard.movies.create",
     label: tJoin(["Create", "Movie"]),
     path: "/dashboard/movies/create",
     component: PageMovieForm,
     exact: true,
   },
   {
-    name: "movies.edit",
+    name: "dashboard.movies.edit",
     label: tJoin(["Edit", "Movie"]),
     path: "/dashboard/movies/:id/edit",
     component: PageMovieForm,
+    exact: true,
+  },
+  {
+    name: "movies",
+    label: i18next.t("Movies"),
+    path: "/movies",
+    component: MovieList,
     exact: true,
   },
 ];

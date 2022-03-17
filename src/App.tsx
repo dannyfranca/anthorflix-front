@@ -18,8 +18,8 @@ function App() {
           <NavBar />
           <Box paddingTop="70px">
             <Breadcrumbs />
-            <AppRouter />
           </Box>
+          <AppRouter />
         </BrowserRouter>
       </SnackbarProvider>
     </ThemeProvider>
