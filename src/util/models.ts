@@ -20,3 +20,12 @@ export interface Movie extends BaseEntity {
   description: string;
   year_launched: number;
 }
+
+export interface Rating extends BaseEntity {
+  value: number;
+  content: string | null;
+  movie_id: string;
+  user: {
+    username: string;
+  };
+}
