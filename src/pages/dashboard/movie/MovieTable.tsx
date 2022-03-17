@@ -15,6 +15,7 @@ import DataTable, { DataTableColumn } from "@/components/Table";
 import FilterResetButton from "@/components/Table/FilterResetButton";
 import useFilter, { FilterManager } from "@/hooks/useFilter";
 import movieHttp from "@/util/http/movie-http";
+import { handleRequestError } from "@/util/request-error-handler";
 
 const columns: DataTableColumn[] = [
   {
@@ -108,13 +109,7 @@ const MovieTable: React.FC = () => {
         setTotalRecords(data.length);
         // setTotalRecords(meta?.total);
       })
-      .catch((error) => {
-        if (HttpResource.isCanceled(error)) return;
-        console.error(error);
-        snackbar.enqueueSnackbar(t("Unable to load data"), {
-          variant: "error",
-        });
-      })
+      .catch(handleRequestError(snackbar)(t))
       .finally(() => {
         setLoading(false);
       });

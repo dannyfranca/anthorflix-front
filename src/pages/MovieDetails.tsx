@@ -8,6 +8,9 @@ import movieHttp from "@/util/http/movie-http";
 import { useParams } from "react-router-dom";
 import MovieThumb from "@/components/MovieThumb";
 import RatingBadge from "@/components/RatingBadge";
+import MovieRatings from "@/components/MovieRatings";
+import HttpResource from "@/util/http/http-resource";
+import { handleRequestError } from "@/util/request-error-handler";
 
 const MovieDetails: React.FC = () => {
   const { t } = useTranslation();
@@ -21,12 +24,7 @@ const MovieDetails: React.FC = () => {
       .then(({ data }) => {
         setData(data);
       })
-      .catch((error) => {
-        console.error(error);
-        snackbar.enqueueSnackbar(t("Unable to load data"), {
-          variant: "error",
-        });
-      });
+      .catch(handleRequestError(snackbar)(t));
   };
 
   useEffect(() => {
@@ -77,10 +75,17 @@ const MovieDetails: React.FC = () => {
               {t("Cast members")}
             </Typography>
             <Typography variant="body2" pt={1}>
-              {["Ator 1 ", "Ator 2"].join(", ")}
+              {["Ator 1", "Ator 2"].join(", ")}
             </Typography>
           </Grid>
         </Grid>
+      </Container>
+      <Container>
+        <Box pt={3}>
+          <Typography variant="h4">Avaliações</Typography>
+        </Box>
+        <MovieRatings movieId={data?.id as string} />
+        <MovieRatings movieId={data?.id as string} />
       </Container>
     </Box>
   );

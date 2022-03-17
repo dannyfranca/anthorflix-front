@@ -9,12 +9,12 @@ import { dataTableTheme } from "@/config/data-table-theme";
 import EditIcon from "@mui/icons-material/Edit";
 import { formatDateFromIso } from "@/util/date";
 import { Genre } from "@/util/models";
-import HttpResource from "@/util/http/http-resource";
 import { Creators } from "@/store/filter";
 import DataTable, { DataTableColumn } from "@/components/Table";
 import FilterResetButton from "@/components/Table/FilterResetButton";
 import useFilter, { FilterManager } from "@/hooks/useFilter";
 import genreHttp from "@/util/http/genre-http";
+import { handleRequestError } from "@/util/request-error-handler";
 
 const columns: DataTableColumn[] = [
   {
@@ -92,13 +92,7 @@ const GenreTable: React.FC = () => {
         setTotalRecords(data.length);
         // setTotalRecords(meta?.total);
       })
-      .catch((error) => {
-        if (HttpResource.isCanceled(error)) return;
-        console.error(error);
-        snackbar.enqueueSnackbar(t("Unable to load data"), {
-          variant: "error",
-        });
-      })
+      .catch(handleRequestError(snackbar)(t))
       .finally(() => {
         setLoading(false);
       });

@@ -8,6 +8,7 @@ import movieHttp from "@/util/http/movie-http";
 import { Link } from "react-router-dom";
 import MovieThumb from "@/components/MovieThumb";
 import RatingBadge from "@/components/RatingBadge";
+import { handleRequestError } from "@/util/request-error-handler";
 
 const MovieList: React.FC = () => {
   const { t } = useTranslation();
@@ -20,12 +21,7 @@ const MovieList: React.FC = () => {
       .then(({ data }) => {
         setData(data);
       })
-      .catch((error) => {
-        console.error(error);
-        snackbar.enqueueSnackbar(t("Unable to load data"), {
-          variant: "error",
-        });
-      });
+      .catch(handleRequestError(snackbar)(t));
   };
 
   useEffect(() => {
