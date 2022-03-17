@@ -49,7 +49,7 @@ const columns: DataTableColumn[] = [
           <IconButton
             color="primary"
             component={Link}
-            to={`/genres/${tableMeta.rowData[0]}/edit`}
+            to={`genres/${tableMeta.rowData[0]}/edit`}
           >
             <EditIcon />
           </IconButton>

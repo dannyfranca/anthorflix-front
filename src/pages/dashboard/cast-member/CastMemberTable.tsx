@@ -49,7 +49,7 @@ const columns: DataTableColumn[] = [
           <IconButton
             color="primary"
             component={Link}
-            to={`/cast_members/${tableMeta.rowData[0]}/edit`}
+            to={`cast_members/${tableMeta.rowData[0]}/edit`}
           >
             <EditIcon />
           </IconButton>
