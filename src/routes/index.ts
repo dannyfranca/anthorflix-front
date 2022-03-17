@@ -2,14 +2,14 @@ import { FunctionComponent } from "react";
 import { RouteProps } from "react-router-dom";
 
 import i18next from "@/i18t";
-import Dashboard from "@/pages/Dashboard";
-import PageGenreList from "@/pages/genre/PageGenreList";
-import PageGenreForm from "@/pages/genre/PageGenreForm";
+import Dashboard from "@/pages/dashboard/Dashboard";
+import PageGenreList from "@/pages/dashboard/genre/PageGenreList";
+import PageGenreForm from "@/pages/dashboard/genre/PageGenreForm";
 import { tJoin } from "@/i18t/utils";
-import PageCastMemberList from "@/pages/cast-member/PageCastMemberList";
-import PageCastMemberForm from "@/pages/cast-member/PageCastMemberForm";
-import PageMovieList from "@/pages/movie/PageMovieList";
-import PageMovieForm from "@/pages/movie/PageMovieForm";
+import PageCastMemberList from "@/pages/dashboard/cast-member/PageCastMemberList";
+import PageCastMemberForm from "@/pages/dashboard/cast-member/PageCastMemberForm";
+import PageMovieList from "@/pages/dashboard/movie/PageMovieList";
+import PageMovieForm from "@/pages/dashboard/movie/PageMovieForm";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
