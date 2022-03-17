@@ -1,17 +1,18 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 
 interface MovieThumbProps {
   src?: string;
   alt?: string;
+  style?: CSSProperties;
 }
 
-const MovieThumb: React.FC<MovieThumbProps> = ({ src, alt }) => {
+const MovieThumb: React.FC<MovieThumbProps> = ({ src, alt, style = {} }) => {
   return (
     <img
       style={{
         width: "100%",
-        maxWidth: "200px",
         borderRadius: 8,
+        ...style,
       }}
       src={`${
         src ??

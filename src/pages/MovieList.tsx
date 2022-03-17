@@ -45,6 +45,7 @@ const MovieList: React.FC = () => {
                 <RatingBadge
                   rating={10}
                   sx={{
+                    maxWidth: "200px",
                     position: "absolute",
                     bottom: "-12px",
                     left: "20px",

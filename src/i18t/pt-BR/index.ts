@@ -22,7 +22,7 @@ export const ptBrTranslations: { [k: string]: string } = {
   Genre: "Gênero",
   Genres: "Gêneros",
   "Cast member": "Participante",
-  "Cast members": "Participantes",
+  "Cast members": "Elenco",
   // DATA TABLE
   "No match records found": "Nenhum registro encontrado",
   Sort: "Classificar",

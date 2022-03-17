@@ -11,6 +11,7 @@ import PageCastMemberForm from "@/pages/dashboard/cast-member/PageCastMemberForm
 import PageMovieList from "@/pages/dashboard/movie/PageMovieList";
 import PageMovieForm from "@/pages/dashboard/movie/PageMovieForm";
 import MovieList from "@/pages/MovieList";
+import MovieDetails from "@/pages/MovieDetails";
 
 export interface AppRouteProps extends RouteProps {
   name: string;
@@ -96,6 +97,13 @@ const routes: AppRouteProps[] = [
     label: i18next.t("Movies"),
     path: "/movies",
     component: MovieList,
+    exact: true,
+  },
+  {
+    name: "movies.detail",
+    label: i18next.t("Movie"),
+    path: "/movies/:id",
+    component: MovieDetails,
     exact: true,
   },
 ];

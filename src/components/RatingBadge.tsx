@@ -3,14 +3,20 @@ import React from "react";
 
 interface RatingBadgeProps {
   rating: number;
+  sizeFactor?: number;
   sx?: SxProps<Theme>;
 }
 
-const RatingBadge: React.FC<RatingBadgeProps> = ({ rating, sx = {} }) => {
+const RatingBadge: React.FC<RatingBadgeProps> = ({
+  rating,
+  sizeFactor = 1,
+  sx = {},
+}) => {
   return (
     <Box
       sx={{
         bgcolor: "primary.main",
+        transform: `scale(${sizeFactor})`,
         width: 40,
         height: 40,
         borderRadius: "50%",
