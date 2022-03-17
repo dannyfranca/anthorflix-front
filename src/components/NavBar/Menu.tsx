@@ -8,7 +8,7 @@ import routes, { AppRouteProps } from "@/routes";
 const Menu: React.FC = () => {
   const listRoutes = routes
     .map((r) => r.name)
-    .filter((n) => !n.includes(".") || n.endsWith(".list"));
+    .filter((n) => n.startsWith("dashboard") && n.endsWith(".list"));
   const menuRoutes = routes.filter((route) => listRoutes.includes(route.name));
   const routeObject: { [k: string]: AppRouteProps } = {};
   menuRoutes.forEach((v) => {
