@@ -32,7 +32,7 @@ const MovieDetails: React.FC = () => {
   }, []);
 
   return (
-    <Box paddingTop="20px">
+    <Box py={5}>
       <Container>
         <Grid
           container
